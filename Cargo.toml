@@ -1,0 +1,27 @@
+[package]
+name = "projectionist"
+version = "0.1.0"
+edition = "2021"
+description = "Project-aware file navigation via .projections.json (vim-projectionist port)"
+license = "MIT"
+repository = "https://github.com/edsinclair/zed-projectionist"
+keywords = ["projectionist", "navigation", "editor", "zed"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "projectionist"
+path = "src/main.rs"
+
+[lib]
+name = "projectionist"
+path = "src/lib.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+thiserror = "1"
+
+[dev-dependencies]
+tempfile = "3"
